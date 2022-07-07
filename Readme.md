@@ -34,9 +34,12 @@ export FLASK_APP=run
 flask run
 ```
 
-### Prod Env
+## Build
+The project currently has a very simple github build:
+- installs dependencies
+- lints with flake 8
+- runs unittest
 
-BUILD
 
 ## Running Unit Tests ###
 
