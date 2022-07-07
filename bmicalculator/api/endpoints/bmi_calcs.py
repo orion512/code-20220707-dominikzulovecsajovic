@@ -16,7 +16,7 @@ bmi_api = Blueprint("api", __name__)
 @bmi_api.route("/do-bmi-magic", methods=["POST"])
 @validate(body=JsonChecker)
 def do_bmi_magic() -> Tuple[Dict[str, str], int]:
-    """ Endpoint for doing BMI magic """
+    """Endpoint for doing BMI magic"""
 
     try:
         return handle_bmi_request(request)

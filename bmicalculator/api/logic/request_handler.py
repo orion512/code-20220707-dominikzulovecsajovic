@@ -15,7 +15,7 @@ from bmicalculator.api.logic.BMIWizard import BMIWizard
 
 
 def handle_bmi_request(req: Request) -> Tuple[Dict, int]:
-    """ The main function that handles the entire bmi magic request """
+    """The main function that handles the entire bmi magic request"""
 
     current_app.logger.debug("Entering function handle_bmi_request")
 
@@ -25,20 +25,21 @@ def handle_bmi_request(req: Request) -> Tuple[Dict, int]:
 
         # 2. wizard performs magic
         wiz.perform_magic(
-            current_app.config['BMI_BINS'],
-            current_app.config['BMI_CATEGORIES'],
-            current_app.config['HEALTH_RISKS'],
+            current_app.config["BMI_BINS"],
+            current_app.config["BMI_CATEGORIES"],
+            current_app.config["HEALTH_RISKS"],
         )
-        
+
         # 3. get the results
         res = wiz.get_results()
+        ow = wiz.count_overweight()
 
-        return {"results": res}, 200
+        return {"results": res, "overweight_count": ow}, 200
 
     except Exception as err:
         current_app.logger.error(err)
         raise err
-    
+
 
 if __name__ == "__main__":
     pass

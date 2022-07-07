@@ -13,14 +13,14 @@ from pydantic import BaseModel  # pylint: disable=no-name-in-module
 
 
 class Gender(str, Enum):
-    """ Genders """
+    """Genders"""
 
     MALE = "Male"
     FEMALE = "Female"
 
 
 class Person(BaseModel):
-    """ Representation of a person """
+    """Representation of a person"""
 
     Gender: Gender
     HeightCm: float
@@ -28,5 +28,6 @@ class Person(BaseModel):
 
 
 class JsonChecker(BaseModel):
-    """ Json checker for the BMI calculator """
+    """Json checker for the BMI calculator"""
+
     __root__: List[Person]

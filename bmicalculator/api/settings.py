@@ -17,21 +17,21 @@ class Config:
 
     BMI_BINS = [0, 18.4, 24.9, 29.9, 34.9, 39.9, 9999]
     BMI_CATEGORIES = [
-        'Underweight',
-        'Normal weight',
-        'Overweight',
-        'Moderately obese',
-        'Severely obese',
-        'Very severely obese',
+        "Underweight",
+        "Normal weight",
+        "Overweight",
+        "Moderately obese",
+        "Severely obese",
+        "Very severely obese",
     ]
 
     HEALTH_RISKS = [
-        'Malnutrition risk',
-        'Low risk',
-        'Enhanced risk',
-        'Medium risk',
-        'High risk',
-        'Very high risk',
+        "Malnutrition risk",
+        "Low risk",
+        "Enhanced risk",
+        "Medium risk",
+        "High risk",
+        "Very high risk",
     ]
 
 

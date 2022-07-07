@@ -2,6 +2,15 @@
  
 This is the code repository for the:
 - backend (api) part of the Python BMI Calculator
+
+When the code is deployed it stands as a REST API with 1 endpoint.
+```
+http://hostname/bmi/do-bmi-magic
+```
+The endpoint accepts a POST request and data in the below format:
+```
+[{"Gender": "Male", "HeightCm": 171, "WeightKg": 96 }]
+```
  
 ## How do I get it set up? ###
 
